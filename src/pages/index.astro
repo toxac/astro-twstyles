@@ -1,31 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Button from '../components/Button.astro';
-import List from '../components/List.astro';
-
-const items: string[] = [
-	"Way to go",
-	"Your fisrt step",
-	"your second step"
-]
-
-let themeSelection: string = "";
-
+import Hero from '../components/homepage/Hero.astro';
+import PopularProducts from '../components/homepage/PopularProducts.astro';
+import SuperQuality from '../components/homepage/SuperQuality.astro';
+import Services from '../components/homepage/Services.astro';
+import SpecialOffer from '../components/homepage/SpecialOffer.astro';
+import CustomerReviews from '../components/homepage/CustomerReviews.astro';
+import Subscribe from '../components/homepage/Subscribe.astro';
 
 ---
 
-<Layout title="TW with Astro" theme={themeSelection}>
-	<main class="p-10 dark:bg-gray-900">
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<Button buttonText='Get Started' />
-		<p class="">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<List items={items} />
+<Layout title="TW with Astro" theme="">
+	<!--Hero Section -->
+	<section class='xl:padding-l wide:padding-r padding-b'>
+		<Hero />
+	</section>
 
-	</main>
+	<section class='padding'>
+		<PopularProducts />
+	</section>
+
+	<section class='padding'>
+		<SuperQuality />
+	</section>
+
+	<section class='padding-x py-10'>
+		<Services />
+	</section>
+
+	<section class='padding'>
+		<SpecialOffer />
+	</section>
+
+	<section class='bg-pale-blue padding'>
+		<CustomerReviews />
+	</section>
+
+	<section class='padding-x sm:py-32 py-16 w-full'>
+		<Subscribe />
+	</section>
+      
 </Layout>
 
 
