@@ -9,10 +9,14 @@ const items: string[] = [
 	"Your fisrt step",
 	"your second step"
 ]
+
+let themeSelection: string = "";
+
+
 ---
 
-<Layout title="TW with Astro">
-	<main class="p-10">
+<Layout title="TW with Astro" theme={themeSelection}>
+	<main class="p-10 dark:bg-gray-900">
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<Button buttonText='Get Started' />
 		<p class="">
@@ -21,7 +25,8 @@ const items: string[] = [
 		</p>
 		<List items={items} />
 
-		
 	</main>
 </Layout>
+
+
 
