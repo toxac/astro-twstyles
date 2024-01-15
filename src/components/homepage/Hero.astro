@@ -1,5 +1,7 @@
 ---
+import {Image} from 'astro:assets'
 import ButtonCTA from "../ButtonCTA.astro"
+import HeroImage from '../../assets/images/heroside.png'
 
 import { statistics } from "../../shared/contants";
 
@@ -34,7 +36,8 @@ import { statistics } from "../../shared/contants";
         </div>
     </div>
 
-    <div>
-        
+    <div class="relative flex-1 flex justify-center items-center xl:min-h-screen bg-cover">
+        <Image src={HeroImage} alt="hero image" />
+
     </div>
 </section>
