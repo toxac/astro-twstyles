@@ -1,6 +1,8 @@
 ---
 import ButtonCTA from "../ButtonCTA.astro"
 
+import { statistics } from "../../shared/contants";
+
 ---
 
 <section 
@@ -21,7 +23,7 @@ import ButtonCTA from "../ButtonCTA.astro"
         <ButtonCTA text="start here" />
 
         <div class="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
-            
+            {statistics.map((stat)=>(<div><p>{stat.value}</p> <p>{stat.label}</p></div>))}
         </div>
 
     </div>
