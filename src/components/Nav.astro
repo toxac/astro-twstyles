@@ -1,13 +1,21 @@
 ---
 import {Image} from 'astro:assets'
-import logo from '../assets/images/propelrUp.svg'
+import logo from '../assets/images/basicLogo.svg'
+import hamburger from '../assets/icons/hamburger.svg';
 ---
 
-<header> 
-    <nav>
+<header class="padding-x py-8 absolute z-10 w-full"> 
+    <nav class="flex justify-between items-center max-container">
         <a href="/">
-            <Image src={logo} alt="Propelr logo" />
+            <Image src={logo} alt="Propelr logo" height={29} />
         </a>
+        <ul class="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
+            <li>Home</li>
+            <li>Program</li>
+            <li>Resources</li>
+            <li>Events</li>
+            <li>Contact</li>
+        </ul>
     </nav>
 
 </header>
