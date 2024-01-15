@@ -2,6 +2,8 @@
 import {Image} from 'astro:assets'
 import logo from '../assets/images/basicLogo.svg'
 import hamburger from '../assets/icons/hamburger.svg';
+
+import {mainNavLinks} from '../shared/contants'
 ---
 
 <header class="padding-x py-8 absolute z-10 w-full"> 
@@ -10,11 +12,11 @@ import hamburger from '../assets/icons/hamburger.svg';
             <Image src={logo} alt="Propelr logo" height={29} />
         </a>
         <ul class="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
-            <li>Home</li>
-            <li>Program</li>
-            <li>Resources</li>
-            <li>Events</li>
-            <li>Contact</li>
+            {mainNavLinks.map((link) => (
+                <li class="text-lg font-bold">
+                    <a href={link.href}>{link.label}</a>
+                </li>
+            ))}
         </ul>
     </nav>
 
