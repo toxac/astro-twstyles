@@ -1,7 +1,7 @@
 ---
 import {Image} from 'astro:assets'
 import ButtonCTA from "../ButtonCTA.astro"
-import HeroImage from '../../assets/images/heroside.png'
+import HeroImage from '../../assets/images/Jumping.svg'
 
 import { statistics } from "../../shared/contants";
 
@@ -36,8 +36,10 @@ import { statistics } from "../../shared/contants";
         </div>
     </div>
 
-    <div class="relative flex-1 flex justify-center items-center xl:min-h-screen bg-cover">
-        <Image src={HeroImage} alt="hero image" />
+    <div class="relative flex-1 flex justify-center items-center xl:min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500">
+        <Image src={HeroImage} alt="hero image" width={610}
+        height={502}
+        class='object-contain relative z-10' />
 
     </div>
 </section>
