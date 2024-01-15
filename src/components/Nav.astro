@@ -9,12 +9,17 @@ import {mainNavLinks} from '../shared/contants'
 <header class="padding-x py-8 absolute z-10 w-full"> 
     <nav class="flex justify-between items-center max-container">
         <a href="/">
-            <Image src={logo} alt="Propelr logo" height={29} />
+            <Image src={logo} alt="Propelr logo" />
         </a>
         <ul class="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
             {mainNavLinks.map((link) => (
-                <li class="text-lg font-bold">
-                    <a href={link.href}>{link.label}</a>
+                <li>
+                    <a 
+                        href={link.href}
+                        class="font-monserrat leading-normal text-lg text-slate-gray"
+                    >
+                    {link.label}
+                    </a>
                 </li>
             ))}
         </ul>
