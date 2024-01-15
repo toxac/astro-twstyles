@@ -13,18 +13,28 @@ import { statistics } from "../../shared/contants";
     gap-10 max-container">
     <div class="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p class="text-xl font-montserrat text-coral-red">Entrepreneur</p>
-        <h1 class="mt-10 font-palanquin text-8xl max-sm:text-[72px] max-sm:leading[82px] font-bold">
-            <span class="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">Your First Big Step</span>
+        <h1 class="mt-10 font-inter text-8xl leading-none max-sm:text-[72px] max-sm:leading[82px] font-bold">
+            <span class="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">First Big Step</span>
             <br/>
-            <span class="bg-gradient-to-r from-rose-400 to-red-600 bg-clip-text text-transparent">Propler</span> your journey
+            <span class="bg-gradient-to-r from-rose-400 to-red-600 bg-clip-text text-transparent inline-block mt-3">Propler</span> your journey
         </h1>
-        <p>Some value prop stuff goes here and it will be a short sentence</p>
+        <p class="font-montserrat text-slate-600 text-lg mt-6 mb-14 sm:max-w-sm">
+            Some value prop stuff goes here and it will be a short sentence
+        </p>
         
         <ButtonCTA text="start here" />
 
         <div class="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
-            {statistics.map((stat)=>(<div><p>{stat.value}</p> <p>{stat.label}</p></div>))}
+            {statistics.map((stat)=>(
+                <div>
+                    <p class="text-4xl font-inter font-bold">{stat.value}</p> 
+                    <p class="leading-7 font-montserrat text-slate-500">{stat.label}</p>
+                </div>
+            ))}
         </div>
+    </div>
 
+    <div>
+        
     </div>
 </section>
