@@ -1,5 +1,23 @@
 ---
+import ButtonCTA from "../ButtonCTA.astro"
 
 ---
 
-<h1 class="text-coral-red">Hero</h1>
+<section 
+    id="home" 
+    class="w-full flex 
+    xl:flex-row flex-col
+    justify-center min-h-screen 
+    gap-10 max-container">
+    <div class="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
+        <p>Entrepreneur</p>
+        <h1>
+            <span>Your First Big Step</span>
+            <br/>
+            <span>Propler</span> your journey
+        </h1>
+        <p>Some value prop stuff goes here and it will be a short sentence</p>
+        <ButtonCTA text="start here" />
+
+    </div>
+</section>
